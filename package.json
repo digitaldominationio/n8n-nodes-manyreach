@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-manyreach",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial community n8n node for the Manyreach Cold Email API",
   "license": "MIT",
   "homepage": "https://www.digitaldomination.io",
