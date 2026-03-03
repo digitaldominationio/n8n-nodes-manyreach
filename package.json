@@ -1,18 +1,20 @@
 {
   "name": "n8n-nodes-manyreach",
   "version": "0.1.0",
-  "description": "Manyreach Cold Email API n8n node",
+  "description": "Unofficial community n8n node for the Manyreach Cold Email API",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://www.digitaldomination.io",
   "keywords": [
     "n8n-community-node-package",
     "n8n",
     "manyreach",
-    "cold-email"
+    "cold-email",
+    "community",
+    "unofficial"
   ],
   "author": {
     "name": "Biswajit Pradhan",
-    "email": ""
+    "email": "biswajit@digitaldomination.io"
   },
   "repository": {
     "type": "git",
