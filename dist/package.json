@@ -1,0 +1,65 @@
+{
+    "name": "n8n-nodes-manyreach",
+    "version": "0.1.4",
+    "description": "n8n community node for the Manyreach cold email API. Create leads, manage campaigns, and automate outreach workflows directly inside n8n.",
+    "license": "MIT",
+    "homepage": "https://www.digitaldomination.io",
+    "keywords": [
+        "n8n",
+        "n8n-community-node",
+        "n8n-community-node-package",
+        "manyreach",
+        "manyreach-api",
+        "cold-email",
+        "email-outreach",
+        "cold-email-automation",
+        "sales-automation",
+        "lead-generation",
+        "outreach-automation",
+        "n8n-cold-email",
+        "instantly-alternative",
+        "smartlead-alternative",
+        "lemlist-alternative",
+        "apollo-outreach"
+    ],
+    "author": {
+        "name": "Biswajit Pradhan",
+        "email": "biswajit@digitaldomination.io"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/digitaldominationio/n8n-nodes-manyreach.git"
+    },
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": true,
+        "credentials": [
+            "dist/credentials/ManyreachApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/Manyreach/Manyreach.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "eslint": "9.32.0",
+        "prettier": "3.6.2",
+        "release-it": "^19.0.4",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
