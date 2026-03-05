@@ -3,6 +3,7 @@ import {
 	INodeProperties,
 	ICredentialTestRequest,
 } from 'n8n-workflow';
+
 export class ManyreachApi implements ICredentialType {
 	name = 'manyreachApi';
 	displayName = 'Manyreach API';
@@ -20,10 +21,10 @@ export class ManyreachApi implements ICredentialType {
 	];
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://api.manyreach.com/v2',
+			baseURL: 'https://api.manyreach.com/api/v2',
 			url: '/workspaces',
 			headers: {
-				Authorization: '=Bearer {{$credentials.apiKey}}',
+				'X-API-Key': '={{$credentials.apiKey}}',
 			},
 		},
 	};
