@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-manyreach",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "n8n community node for the Manyreach cold email API. Create leads, manage campaigns, and automate outreach workflows directly inside n8n.",
   "license": "MIT",
   "homepage": "https://www.digitaldomination.io",
