@@ -1,16 +1,25 @@
 {
   "name": "n8n-nodes-manyreach",
-  "version": "0.1.1",
-  "description": "Unofficial community n8n node for the Manyreach Cold Email API",
+  "version": "0.1.2",
+  "description": "n8n community node for the Manyreach cold email API. Create leads, manage campaigns, and automate outreach workflows directly inside n8n.",
   "license": "MIT",
   "homepage": "https://www.digitaldomination.io",
   "keywords": [
-    "n8n-community-node-package",
     "n8n",
+    "n8n-community-node",
     "manyreach",
+    "manyreach-api",
     "cold-email",
-    "community",
-    "unofficial"
+    "email-outreach",
+    "cold-email-automation",
+    "sales-automation",
+    "lead-generation",
+    "outreach-automation",
+    "n8n-cold-email",
+    "instantly-alternative",
+    "smartlead-alternative",
+    "lemlist-alternative",
+    "apollo-outreach"
   ],
   "author": {
     "name": "Biswajit Pradhan",
