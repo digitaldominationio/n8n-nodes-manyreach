@@ -471,47 +471,66 @@ export class Manyreach implements INodeType {
 				],
 			},
 
-			// ══════════════════════════════════════════════════════
-			// MESSAGE FIELDS
-			// ══════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════
+// MESSAGE FIELDS
+// ══════════════════════════════════════════════════════
 			{
-				displayName: 'Type', name: 'messageType', type: 'options', required: true, displayOptions: { show: { resource: ['message'], operation: ['getMany'] } }, options: [{ name: 'Reply', value: 'Reply' }, { name: 'Sent', value: 'Sent' }, { name: 'Sent Manual', value: 'SentManual' }], default: 'Sent' },
-                        { displayName: 'Filters', name: 'messageFilters', type: 'collection', placeholder: 'Add Filter', default: {},
-                        displayOptions: { show: { resource: ['message'], operation: ['getMany'] } },
-				options: [
-					{ displayName: 'Campaign ID', name: 'campaignId', type: 'number', default: 0 },
-					{ displayName: 'Confirmed Status', name: 'confirmedStatus', type: 'string', default: '' },
-					{ displayName: 'Email From', name: 'emailFrom', type: 'string', default: '' },
-					{ displayName: 'Email To', name: 'emailTo', type: 'string', default: '' },
-					{ displayName: 'Followup ID', name: 'followupId', type: 'number', default: 0 },
-					{ displayName: 'Limit', name: 'limit', type: 'number',
-																																												typeOptions: {
-																																													minValue: 1,
-																																												},
-																																												description: 'Max number of results to return', default: 50 },
-					{ displayName: 'Page', name: 'page', type: 'number', default: 1 },
-					{ displayName: 'Sender ID', name: 'senderId', type: 'number', default: 0 },
-					{ displayName: 'Subject', name: 'subject', type: 'string', default: '' },
-					{ displayName: 'Type', name: 'type', type: 'string', default: '' },
-				],
-			},
+						displayName: 'Type',
+						name: 'messageType',
+						type: 'options',
+						required: true,
+						displayOptions: { show: { resource: ['message'], operation: ['getMany'] } },
+						options: [
+							{ name: 'Reply', value: 'Reply' },
+							{ name: 'Sent', value: 'Sent' },
+							{ name: 'Sent Manual', value: 'SentManual' },
+						],
+						default: 'Sent',
+				},
 			{
-				displayName: 'Message ID', name: 'messageId', type: 'string', default: '', required: true,
-				displayOptions: { show: { resource: ['message'], operation: ['reply'] } },
-				description: 'The Message-ID header value from the received email',
-			},
-			{
-				displayName: 'Reply Fields', name: 'messageReplyFields', type: 'collection', placeholder: 'Add Field', default: {},
-				displayOptions: { show: { resource: ['message'], operation: ['reply'] } },
-				options: [
-					{ displayName: 'BCC Emails', name: 'bccEmails', type: 'string', default: '' },
-					{ displayName: 'Body (HTML)', name: 'body', type: 'string', typeOptions: { rows: 4 }, default: '' },
-					{ displayName: 'CC Emails', name: 'ccEmails', type: 'string', default: '' },
-					{ displayName: 'From Email', name: 'fromEmail', type: 'string', default: '' },
-					{ displayName: 'Reply To Email', name: 'replyToEmail', type: 'string', default: '' },
-					{ displayName: 'Send As Reply', name: 'sendAsReply', type: 'boolean', default: false },
-					{ displayName: 'Subject', name: 'subject', type: 'string', default: '' },
-				],
+						displayName: 'Filters',
+						name: 'messageFilters',
+						type: 'collection',
+						placeholder: 'Add Filter',
+						default: {},
+						displayOptions: { show: { resource: ['message'], operation: ['getMany'] } },
+						options: [
+							{ displayName: 'Campaign ID', name: 'campaignId', type: 'number', default: 0 },
+							{ displayName: 'Confirmed Status', name: 'confirmedStatus', type: 'string', default: '' },
+							{ displayName: 'Email From', name: 'emailFrom', type: 'string', default: '' },
+							{ displayName: 'Email To', name: 'emailTo', type: 'string', default: '' },
+							{ displayName: 'Followup ID', name: 'followupId', type: 'number', default: 0 },
+							{ displayName: 'Limit', name: 'limit', type: 'number', typeOptions: { minValue: 1 }, description: 'Max number of results to return', default: 50 },
+							{ displayName: 'Page', name: 'page', type: 'number', default: 1 },
+							{ displayName: 'Sender ID', name: 'senderId', type: 'number', default: 0 },
+							{ displayName: 'Subject', name: 'subject', type: 'string', default: '' },
+						],
+				},
+				{
+						displayName: 'Message ID',
+						name: 'messageId',
+						type: 'string',
+						default: '',
+						required: true,
+						displayOptions: { show: { resource: ['message'], operation: ['reply'] } },
+						description: 'The Message-ID header value from the received email',
+				},
+				{
+						displayName: 'Reply Fields',
+						name: 'messageReplyFields',
+						type: 'collection',
+						placeholder: 'Add Field',
+						default: {},
+						displayOptions: { show: { resource: ['message'], operation: ['reply'] } },
+						options: [
+							{ displayName: 'BCC Emails', name: 'bccEmails', type: 'string', default: '' },
+							{ displayName: 'Body (HTML)', name: 'body', type: 'string', typeOptions: { rows: 4 }, default: '' },
+							{ displayName: 'CC Emails', name: 'ccEmails', type: 'string', default: '' },
+							{ displayName: 'From Email', name: 'fromEmail', type: 'string', default: '' },
+							{ displayName: 'Reply To Email', name: 'replyToEmail', type: 'string', default: '' },
+							{ displayName: 'Send As Reply', name: 'sendAsReply', type: 'boolean', default: false },
+							{ displayName: 'Subject', name: 'subject', type: 'string', default: '' },
+						],
 			},
 
 			// ══════════════════════════════════════════════════════
