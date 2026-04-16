@@ -17,13 +17,18 @@ class ManyreachApi {
                 required: true,
             },
         ];
+        this.authenticate = {
+            type: 'generic',
+            properties: {
+                headers: {
+                    'X-API-Key': '={{$credentials.apiKey}}',
+                },
+            },
+        };
         this.test = {
             request: {
                 baseURL: 'https://api.manyreach.com/api/v2',
                 url: '/workspaces',
-                headers: {
-                    'X-API-Key': '={{$credentials.apiKey}}',
-                },
             },
         };
     }

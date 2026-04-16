@@ -1,4 +1,5 @@
 import {
+	IAuthenticateGeneric,
 	ICredentialType,
 	INodeProperties,
 	ICredentialTestRequest,
@@ -19,13 +20,18 @@ export class ManyreachApi implements ICredentialType {
 			required: true,
 		},
 	];
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				'X-API-Key': '={{$credentials.apiKey}}',
+			},
+		},
+	};
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://api.manyreach.com/api/v2',
 			url: '/workspaces',
-			headers: {
-				'X-API-Key': '={{$credentials.apiKey}}',
-			},
 		},
 	};
 }
